@@ -1,1 +1,1 @@
-# Olympics-Insights-Dashboard
+# Olympics-Insight-Dashboard
