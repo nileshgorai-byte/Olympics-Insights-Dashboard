@@ -143,7 +143,7 @@ if user_menu == 'Overall Analysis':
     sports = helper.sport_list(df)
     selected_sport = st.selectbox("Select Sport:", sports)
     x = helper.most_successful_athlete_by_sport(df, sport=selected_sport)
-    st.table(x)
+    st.table(x.head(100))
 
 
 
@@ -243,3 +243,4 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
