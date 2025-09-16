@@ -32,17 +32,17 @@ if user_menu == 'Medal Tally':
 
     medal_tally = helper.fetch_medal_tally(df, selected_year, selected_country)
     if selected_year == "Overall" and selected_country == "Overall":
-        st.header(f"Overall Tally")
+        st.title(f"Overall Tally")
     if selected_year != "Overall" and selected_country == "Overall":
-        st.header(f"Medal Tally in {selected_year} Olympics")
+        st.title(f"Medal Tally in {selected_year} Olympics")
     if selected_year == "Overall" and selected_country != "Overall":
         if (medal_tally["Total"] ==0).all() :
             flag = 0
-        st.header(f"{selected_country} Overall Olympics Medal Tally")
+        st.title(f"{selected_country} Overall Olympics Medal Tally")
     if selected_year != "Overall" and selected_country != "Overall":
         if (medal_tally["Total"] ==0).all() :
             flag = 0
-        st.header(f"{selected_country} Medal Tally in {selected_year} Olympics")
+        st.title(f"{selected_country} Medal Tally in {selected_year} Olympics")
 
     filtered_tally = medal_tally[medal_tally["Total"] != 0]
     if flag == 1:
@@ -59,7 +59,7 @@ if user_menu == 'Medal Tally':
         st.plotly_chart(fig)
     else:
         pass
-    st.header("Successful Countries")
+        
     st.table(medal_tally)
 
 
@@ -243,5 +243,6 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
