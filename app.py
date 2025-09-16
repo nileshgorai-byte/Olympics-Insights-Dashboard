@@ -59,7 +59,7 @@ if user_menu == 'Medal Tally':
         st.plotly_chart(fig)
     else:
         pass
-
+    st.header("Successful Countries")
     st.table(medal_tally)
 
 
@@ -243,4 +243,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
