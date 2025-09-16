@@ -7,7 +7,7 @@ import seaborn as sns
 import preprocessor,helper
 
 
-df = pd.read_csv("athlete_events.csv")
+df = pd.read_csv("athlete_events.zip")
 region_df = pd.read_csv("noc_regions.csv")
 
 df = preprocessor.preprocess(df, region_df)
@@ -241,4 +241,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
+
 )
